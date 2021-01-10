@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// 定義需要的結構體參數
+message InfoRequest{
+    string username = 1;
+}
+
+message InfoResponse{
+    string msg = 2;
+}
+
+// 定義接口
+service Hello{
+    rpc Info(InfoRequest) returns (InfoResponse){
+        
+    }
+}
